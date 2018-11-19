@@ -112,8 +112,10 @@ context.clearRect(0, 0, canvas.width, canvas.height);
 /*общение м/у вкладками*/
 
 var storageHandler = function() {
+var content = canvas.toDataURL();
+sessionStorage.setItem("myKey", content);
 context.clearRect(0, 0, canvas.width, canvas.height);
-      };
+};
 
 window.addEventListener ("storage", storageHandler, false);
 
