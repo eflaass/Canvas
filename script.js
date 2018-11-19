@@ -112,7 +112,7 @@ context.clearRect(0, 0, canvas.width, canvas.height);
 /*общение м/у вкладками*/
 
 var storageHandler = function() {
-        alert('storage event 1');
+        canvas.background = "grey";
       };
 
 window.addEventListener ("storage", storageHandler, false);
