@@ -35,50 +35,29 @@ draw = false;
 
 /*стили кнопок цвета*/
 
-red.addEventListener ("click", function() {
-red.style.border = "2px solid #E74C3C";
-purple.style.border = "2px solid silver";
-blue.style.border = "2px solid silver";
-green.style.border = "2px solid silver";
-orange.style.border = "2px solid silver";
-context.strokeStyle = "#E74C3C";
-});
+var borderStyleRed = "#E74C3C";
+var borderStylePurple = "#8E44AD";
+var borderStyleBlue = "#3498DB";
+var borderStyleGreen = "#2ECC71";
+var borderStyleOrange = "#E67E22";
 
-purple.addEventListener ("click", function() {
-purple.style.border = "2px solid #8E44AD";
-red.style.border = "2px solid silver";
-blue.style.border = "2px solid silver";
-green.style.border = "2px solid silver";
-orange.style.border = "2px solid silver";
-context.strokeStyle = "#8E44AD";
-});
 
-blue.addEventListener ("click", function() {
-blue.style.border = "2px solid #3498DB";
-purple.style.border = "2px solid silver";
-red.style.border = "2px solid silver";
-green.style.border = "2px solid silver";
-orange.style.border = "2px solid silver";
-context.strokeStyle = "#3498DB";
+function divBorder(x, a, b, c, d, e) {
+x.addEventListener ("click", function() {
+x.style.border = "2px solid" + e;
+a.style.border = "2px solid silver";
+b.style.border = "2px solid silver";
+c.style.border = "2px solid silver";
+d.style.border = "2px solid silver";
+context.strokeStyle = e;
 });
+}
 
-green.addEventListener ("click", function() {
-green.style.border = "2px solid #2ECC71";
-purple.style.border = "2px solid silver";
-blue.style.border = "2px solid silver";
-red.style.border = "2px solid silver";
-orange.style.border = "2px solid silver";
-context.strokeStyle = "#2ECC71";
-});
-
-orange.addEventListener ("click", function() {
-orange.style.border = "2px solid #E67E22";
-purple.style.border = "2px solid silver";
-blue.style.border = "2px solid silver";
-green.style.border = "2px solid silver";
-red.style.border = "2px solid silver";
-context.strokeStyle = "#E67E22";
-});
+divBorder(red, purple, blue, green, orange, borderStyleRed);
+divBorder(purple, red, blue, green, orange, borderStylePurple);
+divBorder(blue, red, purple, green, orange, borderStyleBlue);
+divBorder(green, red, purple, blue, orange, borderStyleGreen);
+divBorder(orange, red, purple, blue, green, borderStyleOrange);
 
 /*стили кнопок толщины*/
 
