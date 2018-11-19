@@ -42,7 +42,7 @@ var borderStyleGreen = "#2ECC71";
 var borderStyleOrange = "#E67E22";
 
 
-function divBorder(x, a, b, c, d, e) {
+function btnBorder(x, a, b, c, d, e) {
 x.addEventListener ("click", function() {
 x.style.border = "2px solid" + e;
 a.style.border = "2px solid silver";
@@ -53,11 +53,11 @@ context.strokeStyle = e;
 });
 }
 
-divBorder(red, purple, blue, green, orange, borderStyleRed);
-divBorder(purple, red, blue, green, orange, borderStylePurple);
-divBorder(blue, red, purple, green, orange, borderStyleBlue);
-divBorder(green, red, purple, blue, orange, borderStyleGreen);
-divBorder(orange, red, purple, blue, green, borderStyleOrange);
+btnBorder(red, purple, blue, green, orange, borderStyleRed);
+btnBorder(purple, red, blue, green, orange, borderStylePurple);
+btnBorder(blue, red, purple, green, orange, borderStyleBlue);
+btnBorder(green, red, purple, blue, orange, borderStyleGreen);
+btnBorder(orange, red, purple, blue, green, borderStyleOrange);
 
 /*стили кнопок толщины*/
 
