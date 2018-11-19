@@ -126,10 +126,21 @@ var content = canvas.toDataURL();
 localStorage.setItem("myKey", content);
 });
 
-/*загрузка*/
+/*загрузка из local storage при запуске*/
 
 window.addEventListener ("load", function() {
 var savedImage = localStorage.getItem("myKey");
+var img = new Image();
+img.src = savedImage;
+img.onload = function() {
+  context.drawImage(img, 0, 0);
+}
+});
+
+/*загрузка кнопкой из session storage*/
+
+load.addEventListener ("click", function() {
+var savedImage = sessionStorage.getItem("myKey");
 var img = new Image();
 img.src = savedImage;
 img.onload = function() {
