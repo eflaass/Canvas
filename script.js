@@ -126,7 +126,7 @@ localStorage.setItem("myKey", content);
 
 /*загрузка*/
 
-load.addEventListener ("click", function() {
+window.addEventListener ("load", function() {
 var savedImage = localStorage.getItem("myKey");
 var img = new Image();
 img.src = savedImage;
