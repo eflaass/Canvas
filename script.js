@@ -61,26 +61,18 @@ btnBorder(orange, red, purple, blue, green, borderStyleOrange);
 
 /*стили кнопок толщины*/
 
-thin.addEventListener ("click", function() {
-thin.style.border = "2px solid black";
-normal.style.border = "2px solid silver";
-thick.style.border = "2px solid silver";
-context.lineWidth = 2;
+function btnThicknessBorder(x, a, b, y) {
+x.addEventListener ("click", function() {
+x.style.border = "2px solid black";
+a.style.border = "2px solid silver";
+b.style.border = "2px solid silver";
+context.lineWidth = y;
 });
+}
 
-normal.addEventListener ("click", function() {
-normal.style.border = "2px solid black";
-thin.style.border = "2px solid grey";
-thick.style.border = "2px solid grey";
-context.lineWidth = 4;
-});
-
-thick.addEventListener ("click", function() {
-thick.style.border = "2px solid black";
-thin.style.border = "2px solid grey";
-normal.style.border = "2px solid grey";
-context.lineWidth = 8;
-});
+btnThicknessBorder(thin, normal, thick, 2);
+btnThicknessBorder(normal, thin, thick, 4);
+btnThicknessBorder(thick, normal, thin, 8);
 
 /*очистка холста*/
 
